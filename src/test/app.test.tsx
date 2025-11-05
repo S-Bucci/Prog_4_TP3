@@ -1,11 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import { Menu } from '../../Components/Menu';
+import App from '../App';
 
-
-describe('Componente Menu', () => {
+describe('Comprobar visualizacion inicial de menu', () => {
   test('verificar que se muestran productos mockeados por la API', () => {
     // Renderiza el componente TodoApp en un entorno de prueba virtual
-    render(< Menu />);
+    render(< App />);
 
     // Busca un elemento que contenga el texto "no hay tareas" (ignorando mayúsculas/minúsculas)
     // y verifica que esté presente en el documento.

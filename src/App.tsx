@@ -1,15 +1,23 @@
 import './App.css'
-import { Menu } from './Components/Menu'
+import z from 'zod'
+import { useEffect, useState } from 'react'
 
-function App() {
+const ProductoSchema = z.object({
+  id: z.string(),
+  name: z.string().min(2),
+  price: z.number().positive(),
+});
+type Producto = z.infer<typeof ProductoSchema>;
+
+
+
+
+
+export default function App() {
 
   return (
-    <>
-      <Menu>
-        
-      </Menu>
-    </>
+    <div>
+      
+    </div>
   )
 }
-
-export default App
