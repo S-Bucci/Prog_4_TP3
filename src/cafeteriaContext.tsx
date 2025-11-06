@@ -1,13 +1,8 @@
 import { createContext, useContext, useState, useCallback } from 'react';
 import type { ReactNode } from 'react';
-import z from 'zod';
+import type { Producto } from './schemas/product.schema';
 
-const ProductoSchema = z.object({
-  id: z.string(),
-  name: z.string().min(2),
-  price: z.number().positive(),
-});
-type Producto = z.infer<typeof ProductoSchema>;
+
 
 type CafeteriaContextoTipo = {
   productos: Producto[]
